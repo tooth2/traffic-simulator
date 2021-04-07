@@ -26,8 +26,8 @@ src
         - toggles the current phase of the traffic light between red and green
         - sends an update method to the message queue using move semantics
         - The cycle duration should be a random value between 4 and 6 seconds, 
-        - while-loop uses `std::this_thread::sleep_` for to wait 1ms between two cycles
-        - it is started in a thread when the public method `simulate` is called in a thread queue
+        - while-loop uses `std::this_thread::sleep_for` to wait 1ms between two cycles
+        - it is started in a thread when the public method `simulate()` is called in a thread queue
     - private member 
         - `_currentPhase` which can take red or green as its value.
         - `_trafficLight` a Type of TrafficLight
