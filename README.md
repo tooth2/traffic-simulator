@@ -60,8 +60,9 @@ src
 ### Build instruction
 - Make a build directory in the top level directory: mkdir build && cd build
 - Compile: cmake .. && make
-- Run it: ./traffic_simulation.
--```
+- Run : ./traffic_simulation
+
+```
 cmake_minimum_required(VERSION 3.7)
 add_definitions(-std=c++17)
 
