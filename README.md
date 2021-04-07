@@ -15,8 +15,13 @@ src
 - `TrafficLight`
     - `TrafficLight` is a child class of `TrafficObject`.
     - public methods: `void waitForGreen()` , `void simulate()` , `TrafficLightPhase getCurrentPhase()`
-        - `TrafficLightPhase getCurrentPhase()` : the return is enumType `TrafficLightPhase` that can be either red or green 
-    - a private method: `void cycleThroughPhases()` 
+        - `TrafficLightPhase TrafficLight::getCurrentPhase(): the return is enumType `TrafficLightPhase` that can be either red or green 
+        - `void TrafficLight::simulate()`
+        - `void TrafficLight::waitForGreen()`
+            - The method `waitForGreen` is completed, in which an infinite while loop runs 
+            - repeatedly calls the `receive` function on the message queue. 
+            - Once it receives `TrafficLightPhase::green`, the method returns.
+    - a private method: `void TrafficLight::cycleThroughPhases()` 
         - measures the time between two loop cycles 
         - toggles the current phase of the traffic light between red and green
         - sends an update method to the message queue using move semantics
@@ -42,12 +47,28 @@ src
         - use `std::unique_lock<std::mutex>` and `_condition.wait()` to wait for and receive new messages  
         - pull messages from the queue using move semantics
         - The received object is returned by the `receive` function
-    - `waitForGreen()`
-        - The method `waitForGreen` is completed, in which an infinite while loop runs 
-        - repeatedly calls the `receive` function on the message queue. 
-        - Once it receives `TrafficLightPhase::green`, the method returns.
 - message exchange
     - a private member `_trafficLight` of type `TrafficLight` 
     - The method `Intersection::simulate()` starts the simulation of `_trafficLight`
     - The method `Intersection::addVehicleToQueue` use the methods `TrafficLight::getCurrentPhase` and` TrafficLight::waitForGreen` to block the execution until the traffic light turns green.
 
+### Run-time environment 
+- cmake >= 3.7
+- make >= 4.1 (Linux, Mac), 3.81 (Windows)
+- gcc/g++ >= 5.4
+
+### Build instruction
+- Make a build directory in the top level directory: mkdir build && cd build
+- Compile: cmake .. && make
+- Run it: ./traffic_simulation.
+-```
+cmake_minimum_required(VERSION 3.7)
+add_definitions(-std=c++17)
+
+set(CXX_FLAGS "-Wall")
+set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
+
+project(traffic_simulation)
+
+add_executable(traffic_simulation src/TrafficSimulator-Final.cpp)
+```
