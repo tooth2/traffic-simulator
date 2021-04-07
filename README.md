@@ -3,13 +3,13 @@
 ### Code Structure 
 ```
 src
-|- Graphics.h, Graphics.cpp 
-|- vehicle.h, vehicle.cpp
-|- street.h, street.cpp
-|- intersection.h, intersection.cpp 
-|- TrafficLight.h, TrafficLight.cpp
-|- TrafficObject.h, TrafficObject.cpp
-|- TrafficSimulator.cpp
+|- `Graphics.h`, `Graphics.cpp` 
+|- `Vehicle.h`, `Vehicle.cpp`
+|- `Street.h`, `Street.cpp`
+|- `Intersection.h`, `Intersection.cpp` 
+|- `TrafficLight.h`, `TrafficLight.cpp`
+|- `TrafficObject.h`, `TrafficObject.cpp`
+|- `TrafficSimulator-Final.cpp`
 ```
 - `TrafficLight`
     - `TrafficLight` is a child class of `TrafficObject`.
