@@ -47,7 +47,7 @@ src
         - use `std::unique_lock<std::mutex>` and `_condition.wait()` to wait for and receive new messages  
         - pull messages from the queue using move semantics
         - The received object is returned by the `receive` function
-- message exchange
+- `Intersection`
     - a private member `_trafficLight` of type `TrafficLight` 
     - The method `Intersection::simulate()` starts the simulation of `_trafficLight`
     - The method `Intersection::addVehicleToQueue` use the methods `TrafficLight::getCurrentPhase` and` TrafficLight::waitForGreen` to block the execution until the traffic light turns green.
