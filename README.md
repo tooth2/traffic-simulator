@@ -1,5 +1,14 @@
 # concurrent traffic simulator
 
+A traffic simulator implementation in which vehicles are moving along streets and are crossing intersections.
+With increasing traffic in the city, traffic lights are needed for road safety. Each intersection will therefore be equipped with a traffic light. This project implemented thread-safe communication protocol between vehicles and intersections to complete the simulation and concurrent programming (such as mutexes, locks and message queues) the traffic lights and integrate them properly.
+
+### Project Result 
+Traffic simulation runs with red lights controlling traffic, just as in the .gif file below. There are two simulation : one is Paris street and the other one is NYC street simulation. 
+| Paris | New York| 
+|--| --| 
+| ![Paris](paris.gif)  |![New York](nyc.gif)    |
+
 ### Code Structure 
 ```
 src
@@ -12,6 +21,7 @@ src
 |  TrafficObject.h, TrafficObject.cpp
 |  TrafficSimulator-Final.cpp
 ```
+
 - `TrafficLight`
     - `TrafficLight` is a child class of `TrafficObject`.
     - public methods: `void waitForGreen()` , `void simulate()` , `TrafficLightPhase getCurrentPhase()`
