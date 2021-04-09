@@ -73,3 +73,9 @@ project(traffic_simulation)
 
 add_executable(traffic_simulation src/TrafficSimulator-Final.cpp)
 ```
+### reference 
+- [threads](https://hackernoon.com/learn-c-multi-threading-in-5-minutes-8b881c92941f)
+- [C++14 threads/mutex](https://hackernoon.com/learn-c-multi-threading-in-5-minutes-8b881c92941f)
+- [Message Queue](https://www.tutorialspoint.com/inter_process_communication/inter_process_communication_message_queues.htm)
+- [C++ Standard template library](https://www.modernescpp.com/index.php/c-core-guidelines-rules-for-concurrency-and-parallelism)
+- [C++ tips](https://www.acodersjourney.com/top-20-cplusplus-multithreading-mistakes/)
