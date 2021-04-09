@@ -1,4 +1,4 @@
-# traffic-simulation
+# concurrent traffic simulator
 
 ### Code Structure 
 ```
