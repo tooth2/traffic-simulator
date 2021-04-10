@@ -66,6 +66,7 @@ src
 - cmake >= 3.7
 - make >= 4.1 (Linux, Mac), 3.81 (Windows)
 - gcc/g++ >= 5.4
+- openCV >=4.1
 
 ### Build instruction
 - Make a build directory in the top level directory: mkdir build && cd build
